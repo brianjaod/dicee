@@ -10,6 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    // IBoutlets make the connection to the UI from code
     @IBOutlet weak var diceImageViewLeft: UIImageView!
     @IBOutlet weak var diceImageViewRight: UIImageView!
     
@@ -20,9 +21,7 @@ class ViewController: UIViewController {
         diceImageViewLeft.image = #imageLiteral(resourceName: "DiceSix")
         // UIimage way to do it
         diceImageViewRight.image = UIImage(named: "DiceTwo")
-        
+        diceImageViewLeft.alpha = 0.5;  // semicolons are optional
     }
-
-
 }
 
