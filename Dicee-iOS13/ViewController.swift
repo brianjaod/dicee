@@ -14,6 +14,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var diceImageViewLeft: UIImageView!
     @IBOutlet weak var diceImageViewRight: UIImageView!
     
+    @IBOutlet weak var logoImage: UIImageView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -21,7 +24,19 @@ class ViewController: UIViewController {
         diceImageViewLeft.image = #imageLiteral(resourceName: "DiceSix")
         // UIimage way to do it
         diceImageViewRight.image = UIImage(named: "DiceTwo")
-        diceImageViewLeft.alpha = 0.5;  // semicolons are optional
+        // Change img opacity
+        //diceImageViewLeft.alpha = 0.5;  // semicolons are optional
+    }
+    
+    @IBAction func rollButtonPressed(_ sender: UIButton) {
+        if diceImageViewLeft.image == UIImage(named: "DiceSix") {
+            diceImageViewLeft.image = UIImage(named: "DiceThree")
+            logoImage.image = UIImage(named: "snakeEyes")
+        }
+        else {
+            diceImageViewLeft.image = UIImage(named: "DiceSix")
+            logoImage.image = UIImage(named: "DiceeLogo")
+        }
     }
 }
 

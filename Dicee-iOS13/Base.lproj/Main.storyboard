@@ -39,6 +39,9 @@
                                 <state key="normal" title="Let's Roll!">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="rollButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LKT-PK-BQi"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -47,6 +50,7 @@
                     <connections>
                         <outlet property="diceImageViewLeft" destination="fU4-9i-5f5" id="zdt-ri-w7x"/>
                         <outlet property="diceImageViewRight" destination="k3U-4J-L6J" id="C9O-6c-bUl"/>
+                        <outlet property="logoImage" destination="wLk-Lm-bVo" id="Yj8-Le-gGg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
