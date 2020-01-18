@@ -37,6 +37,8 @@ class ViewController: UIViewController {
             diceImageViewLeft.image = UIImage(named: "DiceSix")
             logoImage.image = UIImage(named: "DiceeLogo")
         }
+        // Print to debug log
+        print("Button press")
     }
 }
 
