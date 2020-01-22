@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var logoImage: UIImageView!
     
     var diceArray = [#imageLiteral(resourceName: "DiceOne"),#imageLiteral(resourceName: "DiceTwo"),#imageLiteral(resourceName: "DiceThree"),#imageLiteral(resourceName: "DiceFour"),#imageLiteral(resourceName: "DiceFive"),#imageLiteral(resourceName: "DiceSix")]
-    var leftNum = 2, rightNum = 5
+    var leftNum = 2, rightNum = 2
     
     
     override func viewDidLoad() {
@@ -36,6 +36,19 @@ class ViewController: UIViewController {
         print("Right num before: \(rightNum+1)")
         diceImageViewLeft.image = diceArray[leftNum]
         diceImageViewRight.image = diceArray[rightNum]
+        if leftNum == 0 && rightNum == 0
+        {
+            logoImage.image = UIImage(named: "snakeEyes")
+        }
+        else if leftNum == 5 && rightNum == 5
+        {
+            logoImage.image = UIImage(named: "boxcars")
+        }
+        else
+        {
+            logoImage.image = UIImage(named: "DiceeLogo")
+        }
+            
         leftNum += 1
         if leftNum == 6
         {
