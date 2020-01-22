@@ -23,6 +23,8 @@ class ViewController: UIViewController {
         print("Left num before: \(leftNum+1)")
         print("Right num before: \(rightNum+1)")
         
+        // assign random nums
+        // also, diceArray.randomElement() could also be used
         leftNum = Int.random(in:0...5)
         rightNum = Int.random(in:0...5)
         
