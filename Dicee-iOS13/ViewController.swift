@@ -17,12 +17,15 @@ class ViewController: UIViewController {
     @IBOutlet weak var logoImage: UIImageView!
     
     var diceArray = [#imageLiteral(resourceName: "DiceOne"),#imageLiteral(resourceName: "DiceTwo"),#imageLiteral(resourceName: "DiceThree"),#imageLiteral(resourceName: "DiceFour"),#imageLiteral(resourceName: "DiceFive"),#imageLiteral(resourceName: "DiceSix")]
-    var leftNum = 3, rightNum = 1
-    
+    var leftNum=0, rightNum=0   // don't forget to initialze
     
     @IBAction func rollButtonPressed(_ sender: UIButton) {
         print("Left num before: \(leftNum+1)")
         print("Right num before: \(rightNum+1)")
+        
+        leftNum = Int.random(in:0...5)
+        rightNum = Int.random(in:0...5)
+        
         diceImageViewLeft.image = diceArray[leftNum]
         diceImageViewRight.image = diceArray[rightNum]
         if leftNum == 0 && rightNum == 0
@@ -38,6 +41,7 @@ class ViewController: UIViewController {
             logoImage.image = UIImage(named: "DiceeLogo")
         }
             
+        /*
         leftNum += 1
         if leftNum == 6
         {
@@ -48,7 +52,7 @@ class ViewController: UIViewController {
         {
             rightNum = 0
         }
-        /*
+        
         if diceImageViewLeft.image == UIImage(named: "DiceSix") {
             diceImageViewLeft.image = UIImage(named: "DiceThree")
             logoImage.image = UIImage(named: "snakeEyes")
