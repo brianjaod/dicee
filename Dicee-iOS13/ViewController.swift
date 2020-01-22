@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var logoImage: UIImageView!
     
-    var diceArray = [#imageLiteral(resourceName: "DiceOne"),#imageLiteral(resourceName: "DiceTwo"),#imageLiteral(resourceName: "DiceThree"),#imageLiteral(resourceName: "DiceFour"),#imageLiteral(resourceName: "DiceFive"),#imageLiteral(resourceName: "DiceSix")]
+    let diceArray = [#imageLiteral(resourceName: "DiceOne"),#imageLiteral(resourceName: "DiceTwo"),#imageLiteral(resourceName: "DiceThree"),#imageLiteral(resourceName: "DiceFour"),#imageLiteral(resourceName: "DiceFive"),#imageLiteral(resourceName: "DiceSix")]
     var leftNum=0, rightNum=0   // don't forget to initialze
     
     @IBAction func rollButtonPressed(_ sender: UIButton) {
