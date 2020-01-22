@@ -17,19 +17,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var logoImage: UIImageView!
     
     var diceArray = [#imageLiteral(resourceName: "DiceOne"),#imageLiteral(resourceName: "DiceTwo"),#imageLiteral(resourceName: "DiceThree"),#imageLiteral(resourceName: "DiceFour"),#imageLiteral(resourceName: "DiceFive"),#imageLiteral(resourceName: "DiceSix")]
-    var leftNum = 2, rightNum = 2
+    var leftNum = 3, rightNum = 1
     
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        // Image literal way to do it
-        diceImageViewLeft.image = #imageLiteral(resourceName: "DiceSix")
-        // UIimage way to do it
-        diceImageViewRight.image = UIImage(named: "DiceTwo")
-        // Change img opacity
-        //diceImageViewLeft.alpha = 0.5;  // semicolons are optional
-    }
     
     @IBAction func rollButtonPressed(_ sender: UIButton) {
         print("Left num before: \(leftNum+1)")
